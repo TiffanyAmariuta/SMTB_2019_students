@@ -1,2 +1,2 @@
-# SMTB_2019_students
-repository for students
+# SMTB_2019
+Biology Lab Course to Study Transcriptional States of Autoimmunity

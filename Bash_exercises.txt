@@ -1,0 +1,37 @@
+Steps. 
+
+1. Go to https://github.com/TiffanyAmariuta/SMTB_2019
+2. Click "Clone or download" button
+3. Copy link
+4. Open terminal 
+5. git clone https://github.com/TiffanyAmariuta/SMTB_2019.git
+6. cd ~/SMTB_2019/ #change directory (down the hierarchy)
+7. ls #list directories and files 
+8. mkdir Rotation_August10
+9. cp Bash_exercises.txt Rotation_August10/ #copy file to your new directory
+10. #rename your file
+	cd Rotation_August10/
+	mv Bash_exercises.txt Bash_exercises_2.txt #rename 
+	less Bash_exercises_2.txt #preview
+	vi Bash_exercises_2.txt #see file (full load; takes a long time for large files) 
+	#when you are in vi mode: 
+	#to edit your file, press i 
+	#this brings you to "insert" mode, where you can start typing 
+	#then save your file: 
+	#hit the escape key
+	#then type :wq!
+	#and hit enter
+11. cd .. #move back 1 directory, cd ../../ moves back 2 directories
+12. wc -l JingleBells.txt >> out.txt #count the number of lines in this file 
+13. grep -o bells JingleBells.txt | wc -l >> out.txt #find matches, count them, and send to output. 
+14. rm out.txt #remove your file
+
+Task with Rstudio (optional- only if you've finished the bash exercises): R_worksheet.R
+
+15. rm -r Rotation_August10/ #recursively remove your directory 
+	
+
+
+
+
+
