@@ -1,28 +1,14 @@
 a = readRDS("~/R/SMTB_2019_students/data/scRNAseq/shrinked_table.rds")
 
 range = readRDS("~/R/SMTB_2019_students/data/scRNAseq/16power_median_rate.rds")
-grep("PAX5", rownames(a)[range])
-length(range)
-
 
 sign_genes = 1000
 sign = a[range[1:sign_genes],]
 
 pca = prcomp(t(sign), center = T, scale. = T)
-med4_pca = prcomp(t(med4_sign), center = T, scale. = T)
-nmed4_pca = prcomp(t(nmed4_sign), center = T, scale. = T)
-med8_pca = prcomp(t(med8_sign), center = T, scale. = T)
-med16_pca = prcomp(t(med16_sign), center = T, scale. = T)
-
-rm(a)
-rm(sd_sign)
-rm(med8_sign)
-count_rate30 = function(devs) {
-  return(sqrt((sum(devs[1:30]^2))/(sum(devs^2))))
-}
 
 count_rate30(pca$sdev)
-count_rate30(sd_pca$sdev)
+
 sd_pca = as.data.frame(sd_pca$x)
 med4_pca = as.data.frame(med4_pca$x)
 med8_pca = as.data.frame(med8_pca$x)
